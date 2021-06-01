@@ -1,0 +1,52 @@
+public class HelloWorld
+{
+
+     public static void main(String []args)
+     {
+         long x,y;
+         pallin p1 = new pallin();
+       
+         p1.show(123321);
+         
+        
+     }
+}
+
+
+    class pallin
+    {
+        long res=0;
+        long i;
+        public long reverse(long n)
+        {
+           while(n!=0)
+           {
+               i=n%10;
+               res=res*10+i;
+               n=n/10;
+           }
+           return res;
+        }
+        
+        public boolean validate(long n)
+        {
+            long k; boolean j;
+            k= reverse(n);
+            j=(n==k)?true:false;
+            return j;
+            
+        }
+        public void show(long n)
+        {
+            if(validate(n))
+            {
+                System.out.println("Pallindrome");
+            }
+            else
+            {
+                System.out.println("Not Pallindrome");
+            }
+        }
+    }
+           
+          
