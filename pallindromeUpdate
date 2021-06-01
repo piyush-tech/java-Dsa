@@ -1,0 +1,34 @@
+public class HelloWorld
+{
+
+     public static void main(String []args)
+     {
+         
+         pallin p1 = new pallin();
+       
+         boolean x= p1.reverse(626);
+         System.out.println(x);
+         
+        
+     }
+}
+
+
+    class pallin
+    {
+        long res=0;
+        long i,temp;
+        public boolean reverse(long n)
+        {
+            temp=n;
+           while(temp!=0)
+           {
+               i=temp%10;
+               res=res*10+i;
+               temp=temp/10;
+           }
+           return (res==n);
+        }
+        
+    }
+          
